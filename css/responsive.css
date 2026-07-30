@@ -1,0 +1,442 @@
+/* 
+ * GPS ADVISORY — Mobile-First Responsive System
+ * Breakpoints:
+ * - Mobile: 320px – 480px
+ * - Large Mobile: 481px – 767px
+ * - Tablet: 768px – 1023px
+ * - Laptop: 1024px – 1439px
+ * - Desktop: 1440px+
+ */
+
+/* ---------------- Global Responsive Rules ---------------- */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure no horizontal scrollbar across all devices */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Minimum 44px touch targets for accessibility */
+button, a.btn-gold, .field, .faq-button {
+  min-height: 44px;
+}
+
+/* ---------------- Mobile Base (320px – 480px) ---------------- */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Header Navigation */
+  header {
+    border-bottom: 1px solid oklch(0.79 0.114 78 / 12%);
+    background: oklch(0.15 0.018 268 / 90%);
+    backdrop-filter: blur(16px);
+  }
+
+  .header-inner {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .brand {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+  }
+
+  .countdown-wrap {
+    gap: 0.25rem;
+  }
+
+  .countdown-box {
+    min-width: 2.2rem;
+    padding: 0.25rem 0.3rem;
+    border-radius: 0.5rem;
+  }
+
+  .countdown-val {
+    font-size: 0.85rem;
+  }
+
+  .countdown-lbl {
+    font-size: 0.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .header-cta-btn {
+    padding: 0.5rem 0.85rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding-top: 6.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-h1 {
+    font-size: clamp(1.75rem, 7.5vw, 2.4rem);
+    line-height: 1.15;
+    margin-top: 1rem;
+  }
+
+  .hero-sub {
+    font-size: clamp(0.9rem, 4vw, 1.05rem);
+    margin-top: 1rem;
+  }
+
+  .speakers-row {
+    margin-top: 2rem;
+    gap: 0.75rem;
+  }
+
+  .speaker-img-wrap {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .speaker-name {
+    font-size: 0.7rem;
+    margin-top: 0.6rem;
+  }
+
+  .speaker-role {
+    font-size: 0.65rem;
+  }
+
+  .hero-cta-wrap {
+    margin-top: 2.5rem;
+    width: 100%;
+  }
+
+  .hero-cta-wrap .btn-gold {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.85rem 1.25rem;
+    font-size: 1rem !important;
+  }
+
+  .hero-meta-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .meta-item {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .meta-big {
+    font-size: 1.1rem;
+  }
+
+  .meta-small {
+    font-size: 0.6rem;
+  }
+
+  /* General Sections */
+  .section {
+    padding: 4rem 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    margin-top: 0.85rem;
+  }
+
+  .section-sub {
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+  }
+
+  /* Two Lenses */
+  .lenses-grid {
+    margin-top: 2.5rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .lens-card {
+    padding: 1.35rem;
+  }
+
+  .lens-card-head h3 {
+    font-size: 1.25rem;
+  }
+
+  /* Symptoms */
+  .symptoms-list {
+    margin-top: 2.5rem;
+  }
+
+  .symptom-item {
+    padding: 1rem;
+    gap: 0.85rem;
+    font-size: 0.88rem;
+  }
+
+  /* Experts */
+  .experts-grid {
+    margin-top: 2.5rem;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .expert-head {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .expert-avatar {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .expert-head h3 {
+    font-size: 1.25rem;
+  }
+
+  .expert-stat-box {
+    padding: 1rem;
+  }
+
+  .stat-val {
+    font-size: 1.5rem;
+  }
+
+  .stat-lbl {
+    font-size: 0.65rem;
+  }
+
+  .expert-body {
+    padding: 1.25rem;
+  }
+
+  /* Shift */
+  .shift-grid {
+    margin-top: 2.5rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .shift-arrow {
+    transform: rotate(90deg);
+  }
+
+  /* Curriculum */
+  .curriculum-grid {
+    margin-top: 2.5rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .curriculum-card {
+    padding: 1.35rem;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    width: 18rem;
+    padding: 1.25rem;
+  }
+
+  /* FAQ Accordion */
+  .faq-list {
+    margin-top: 2.5rem;
+  }
+
+  .faq-button {
+    padding: 1rem 1.15rem;
+    font-size: 1rem;
+  }
+
+  .faq-item.active .faq-content {
+    padding: 0 1.15rem 1.15rem;
+  }
+
+  /* Reservation Modal */
+  .modal-card {
+    padding: 1.35rem 1.15rem;
+    max-height: 92vh;
+    overflow-y: auto;
+    border-radius: 1rem;
+  }
+
+  .modal-card h3 {
+    font-size: 1.35rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 2rem 1rem;
+  }
+}
+
+/* ---------------- Large Mobile (481px – 767px) ---------------- */
+@media (min-width: 481px) and (max-width: 767px) {
+  .hero-section {
+    padding-top: 7rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .hero-h1 {
+    font-size: clamp(2.2rem, 6vw, 2.8rem);
+  }
+
+  .speakers-row {
+    gap: 1.25rem;
+  }
+
+  .speaker-img-wrap {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
+  .hero-meta-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.6rem;
+  }
+
+  .section {
+    padding: 5rem 1.25rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 4.5vw, 2.4rem);
+  }
+
+  .lenses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .curriculum-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shift-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shift-arrow {
+    transform: rotate(90deg);
+  }
+
+  .testimonial-card {
+    width: 20rem;
+  }
+}
+
+/* ---------------- Tablet (768px – 1023px) ---------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-section {
+    padding-top: 7.5rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero-h1 {
+    font-size: clamp(2.8rem, 5.5vw, 3.6rem);
+  }
+
+  .speakers-row {
+    gap: 1.5rem;
+  }
+
+  .speaker-img-wrap {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .lenses-grid {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .experts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .curriculum-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shift-grid {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .shift-arrow {
+    transform: rotate(0deg);
+  }
+}
+
+/* ---------------- Laptop (1024px – 1439px) ---------------- */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .hero-h1 {
+    font-size: clamp(3.4rem, 5vw, 4.2rem);
+  }
+
+  .lenses-grid {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .experts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .curriculum-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .shift-grid {
+    grid-template-columns: 1fr auto 1fr;
+  }
+}
+
+/* ---------------- Desktop & Large Screens (1440px+) ---------------- */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 76rem;
+  }
+
+  .hero-h1 {
+    font-size: 4.6rem;
+  }
+
+  .lenses-grid {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .experts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .curriculum-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .shift-grid {
+    grid-template-columns: 1fr auto 1fr;
+  }
+}
+
+/* ---------------- Reduced Motion Accessibility ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .marquee-track {
+    animation: none !important;
+  }
+}
