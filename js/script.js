@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveals();
   initFaqAccordion();
   initCountUp();
+  initGalleryLightbox();
 });
 
 /* ---------------- Starfield Canvas Animation ---------------- */
@@ -174,3 +175,35 @@ function initCountUp() {
 
   counters.forEach(el => observer.observe(el));
 }
+
+/* ---------------- Gallery Lightbox Modal ---------------- */
+function initGalleryLightbox() {
+  const lightbox = document.getElementById('image-lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('lightbox-close');
+  if (!lightbox || !lightboxImg) return;
+
+  document.querySelectorAll('.gallery-img-card img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt || 'Gallery Photo';
+      lightbox.classList.add('active');
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+}
+
